@@ -71,9 +71,9 @@ Basic requirements:
 sudo pip2 install rospkg catkin_pkg
 sudo pip2 install pyOpenSSL==16.2.0
 
-sudo apt-get install python3-pyqt4 \
+sudo apt-get install python-pyqt4 \
 libspnav-dev \
-python3-skimage \
+python-skimage \
 pyqt4-dev-tools \
 libcwiid-dev \ 
 libbluetooth-dev
@@ -81,7 +81,7 @@ libbluetooth-dev
 sudo apt-get install \
 cmake gcc g++ qt4-qmake libqt4-dev \
 libusb-dev libftdi-dev \
-python3-defusedxml python3-vcstool \
+python-defusedxml python-vcstool \
 ros-kinetic-octomap-msgs        \
 ros-kinetic-joy                 \
 ros-kinetic-geodesy             \
@@ -156,7 +156,8 @@ Agent dependencies:
 # that are set during the script's execution aren't preserved
 bash
 cd gym_gazebo/envs/installation
-bash setup_kinetic.bash		
+./setup_kinetic.bash	
+./turtlebot_setup.bash
 ```
 
 Run the environment with a sample agent:
@@ -164,6 +165,23 @@ Run the environment with a sample agent:
 # only execute this while still in the same bash as last step
 cd ../../../examples/scripts_turtlebot/
 python circuit2_turtlebot_lidar_qlearn.py
+```
+
+The result should look like this (after a few seconds):
+```
+... (messages about ROS and Gazebo starting up, until finally:) ...
+[ INFO] [1508869124.880487247, 81.480000000]: GazeboRosKobuki plugin ready to go! [mobile_base]
+EP: 1 - [alpha: 0.2 - gamma: 0.8 - epsilon: 0.9] - Reward: -87     Time: 0:00:05
+EP: 2 - [alpha: 0.2 - gamma: 0.8 - epsilon: 0.9] - Reward: -155     Time: 0:00:05
+EP: 3 - [alpha: 0.2 - gamma: 0.8 - epsilon: 0.9] - Reward: -165     Time: 0:00:05
+EP: 4 - [alpha: 0.2 - gamma: 0.8 - epsilon: 0.89] - Reward: -156     Time: 0:00:06
+EP: 5 - [alpha: 0.2 - gamma: 0.8 - epsilon: 0.89] - Reward: -162     Time: 0:00:06
+EP: 6 - [alpha: 0.2 - gamma: 0.8 - epsilon: 0.89] - Reward: -161     Time: 0:00:07
+EP: 7 - [alpha: 0.2 - gamma: 0.8 - epsilon: 0.89] - Reward: -167     Time: 0:00:07
+EP: 8 - [alpha: 0.2 - gamma: 0.8 - epsilon: 0.89] - Reward: -166     Time: 0:00:08
+EP: 9 - [alpha: 0.2 - gamma: 0.8 - epsilon: 0.89] - Reward: -154     Time: 0:00:08
+EP: 10 - [alpha: 0.2 - gamma: 0.8 - epsilon: 0.89] - Reward: -157     Time: 0:00:09
+...
 ```
 
 ### Ubuntu 14.04
