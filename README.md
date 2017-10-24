@@ -149,13 +149,19 @@ sudo pip3 install keras
 
 Agent dependencies:
 ```bash
+# make sure to switch to bash, because the installation script 
+# hasn't been converted to ZSH yet
+# and if you run it from ZSH the environmental variables 
+# that are set during the script's execution aren't preserved
+bash
 cd gym_gazebo/envs/installation
 bash setup_kinetic.bash		
 ```
 
 Run the environment with a sample agent:
 ```bash
-cd gym_gazebo/examples/scripts_turtlebot
+# only execute this while still in the same bash as last step
+cd ../../../examples/scripts_turtlebot/
 python circuit2_turtlebot_lidar_qlearn.py
 ```
 
