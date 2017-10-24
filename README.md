@@ -70,7 +70,12 @@ Basic requirements:
 ```
 sudo pip3 install rospkg catkin_pkg
 
-sudo apt-get install python3-pyqt4 libspnav-dev python3-skimage
+sudo apt-get install python3-pyqt4 \
+libspnav-dev \
+python3-skimage \
+pyqt4-dev-tools \
+libcwiid-dev \ 
+libbluetooth-dev
 
 sudo apt-get install \
 cmake gcc g++ qt4-qmake libqt4-dev \
