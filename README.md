@@ -62,13 +62,14 @@ gzclient
 Basic requirements:
 - ROS Kinetic (`/rosversion: 1.12.7`)
 - Gazebo 8.1.1
-- Python 3.5.2
+- Python 3.5.2 # I have yet to find out why though, because all the standard ROS stuff is in Python 2
 - OpenCV3, installed from sources for Python 3 (`git clone https://github.com/Itseez/opencv.git`)
 - OpenAI gym
 
 #### ROS Kinetic dependencies
 ```
-sudo pip3 install rospkg catkin_pkg
+sudo pip2 install rospkg catkin_pkg
+sudo pip2 install pyOpenSSL==16.2.0
 
 sudo apt-get install python3-pyqt4 \
 libspnav-dev \
@@ -118,7 +119,7 @@ echo "## Sophus installed ##\n"
 ```bash
 git clone https://github.com/erlerobot/gym-gazebo
 cd gym-gazebo
-sudo pip3 install -e .
+sudo pip2 install -e .
 ```
 
 If successful, expect something like [this](https://gist.github.com/vmayoral/4a1e5999811ac8bfbf7875670c430d27).
