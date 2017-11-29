@@ -1,3 +1,9 @@
+#
+
+WE ARE NOT USING THIS ANYMORE IT SHOULD BE DELETED
+
+
+
 # An OpenAI gym extension for using Gazebo known as `gym-gazebo`
 
 <!--[![alt tag](https://travis-ci.org/erlerobot/gym.svg?branch=master)](https://travis-ci.org/erlerobot/gym)-->
